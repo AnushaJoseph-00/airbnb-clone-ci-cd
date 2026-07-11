@@ -1,91 +1,78 @@
-# Airbnb Clone
+# Airbnb Clone — CI/CD Pipeline on AWS
 
-This is an Airbnb clone built with Next.js, TypeScript, Tailwind CSS, MongoDB, Prisma, Next auth, Leaflet and many other technologies.
+A full-stack Airbnb clone application deployed using a 
+complete CI/CD pipeline on AWS cloud infrastructure.
 
-## Features
+## 🏗️ Project Overview
 
-- User registration and authentication
+This project demonstrates end-to-end DevOps practices by 
+taking an existing full-stack application and building a 
+complete automated CI/CD pipeline around it.
+
+## 🛠️ Application Stack
+- **Framework:** Next.js 14 + TypeScript
+- **Styling:** Tailwind CSS
+- **Database:** MongoDB Atlas + Prisma ORM
+- **Authentication:** NextAuth (Google + GitHub OAuth)
+- **Image Storage:** EdgeStore
+- **Maps:** Leaflet
+
+## ☁️ DevOps Stack
+- **CI/CD:** Jenkins
+- **Code Quality:** SonarQube
+- **Containerisation:** Docker
+- **Container Registry:** AWS ECR
+- **Hosting:** AWS ECS Fargate
+- **Load Balancer:** AWS ALB
+
+## 🔄 Pipeline Flow
+
+## ☁️ AWS Services Used
+- EC2 (Jenkins + SonarQube server)
+- ECR (Container Registry)
+- ECS Fargate (Serverless container hosting)
+- ALB (Application Load Balancer)
+- SSM Parameter Store (Secrets management)
+
+
+## 📸 Architecture Diagram
+[architecture diagram here]
+
+
+## 🚀 Live URL
+[ALB URL here after deployment]
+
+## 🔧 Features
+- User registration and authentication (Google + GitHub)
 - Property listing and browsing
 - Property booking and reservations
 - Search and filtering of properties
-- Interactive map using Leaflet to display property locations
+- Interactive map using Leaflet
+- Image uploads via EdgeStore
 
-## Demo
+## 📝 Environment Variables
+```env
+DATABASE_URL=
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+NEXTAUTH_SECRET=
+NEXTAUTH_URL=
+EDGE_STORE_ACCESS_KEY=
+EDGE_STORE_SECRET_KEY=
+```
 
-You can check out a live demo of the Airbnb clone project [here](https://airbnb-clone-phi-green.vercel.app/).
+## 👩‍💻 Author
+Anusha Joseph
+- GitHub: [@AnushaJoseph-00](https://github.com/AnushaJoseph-00)
 
-## Screenshots
+## 🙏 Credits
 
-<kbd><img width="944" alt="vacationhub" src="https://github.com/sudeepmahato16/airbnb_clone/assets/122378993/f893e203-8a2d-4ff1-ae20-67e64187b770"></kbd>
+Original application developed by 
+[Sudeep Mahato](https://github.com/sudeepmahato16).
 
-<kbd><img width="886" alt="login-modal" src="https://github.com/sudeepmahato16/airbnb_clone/assets/122378993/3d6675e0-6046-48dc-b55f-7ef318581ccd"></kbd>
+Original repository: 
+[sudeepmahato16/airbnb-clone](https://github.com/sudeepmahato16/airbnb-clone)
 
-<kbd><img width="810" alt="listing" src="https://github.com/sudeepmahato16/airbnb_clone/assets/122378993/a0b05a50-cbc2-40db-8f62-6cc203a7c887"></kbd>
-
-## Prerequisites
-
-Make sure you have the following software installed on your system:
-
-- git If you want to clone the project from GitHub and work with it locally, you will need to have Git installed on your system. You can download and install Git from the official website (https://git-scm.com/).
-
-- Node.js Application requires Node.js to be installed on your system in order to run. You can download and install the latest version of Node.js from the official website (https://nodejs.org/).
-
-## Installation
-
-- Clone the repository:
-
-  ```
-  git clone https://github.com/sudeepmahato16/airbnb_clone.git
-  ```
-
-- Navigate to the project directory:
-
-  ```
-  cd Airbnb
-  ```
-
-- Install the dependencies:
-
-  ```
-  npm install
-  ```
-
-- Set up the environment variables:
-
-  1.  Create a `.env.local` file in the root directory.
-
-  2.  Add the following variables to the .env file, replacing the placeholder values with your own:
-
-      ```
-      DATABASE_URL=<your-mongodb-uri>
-      GITHUB_CLIENT_ID=<your-github-client-id>
-      GITHUB_CLIENT_SECRET=<your-github-client-secret>
-      GOOGLE_CLIENT_ID=<your-google-client-id>
-      GOOGLE_CLIENT_SECRET=<your-google-client-secret>
-      NEXTAUTH_SECRET=<your-nextauth-secret>
-      EDGE_STORE_ACCESS_KEY=<your-edge-store-access-key>
-      EDGE_STORE_SECRET_KEY=<your-edge-store-secret-key>
-      ```
-
-  ```
-
-  ```
-
-## Usage
-
-- Start the development server:
-
-  ```
-  npm run dev
-  ```
-
-- Open your browser and visit `http://localhost:3000` to access the application.
-
-## Contributing
-
-Contributions are welcome! If you want to contribute to this project, please follow these steps:
-
-- Fork the repository.
-- Create a new branch for your feature or bug fix.
-- Commit your changes to the new branch.
-- Open a pull request back to the main repository, including a description of your changes.
+This project focuses on the **DevOps implementation** CI/CD pipeline, containerisation, and AWS deployment built on top of the original application.
